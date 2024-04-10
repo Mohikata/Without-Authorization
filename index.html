@@ -78,16 +78,16 @@
             <div class="subtext">By: Aldrich Perez</div>
         </div>
         <div class="download-link-container">
-            <div class="download-link"><a href="#" id="download-pup-link">Download Here and Open PUP Website</a></div> <!-- Replace 'your-file-path.pdf' with your file path -->
+            <div class="download-link"><a href="#" id="download-pup-link">Download Here and Open PUP Website</a></div>
         </div>
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById("download-pup-link").addEventListener("click", function(event) {
+             document.getElementById("download-pup-link").addEventListener("click", function(event) {
                 event.preventDefault();
                 var downloadLink = document.createElement("a");
-                downloadLink.href = "./OSSForm.pdf";
-                downloadLink.download = "ID replacement form";
+                downloadLink.innerHTML = `<a href="./OSSForm.pdf" target="_blank" download>Download</a>`
+
                 downloadLink.click();
             });
         });
